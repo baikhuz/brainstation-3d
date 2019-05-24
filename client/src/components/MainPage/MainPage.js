@@ -52,7 +52,7 @@ class MainPage extends React.Component {
         <option value="ICT_client_server">Client Servers</option>
         <option value="ICT_other">Client Servers</option>
       </select>
-      <Link to={`/${this.state.technologyId}`}><button class="button">Go!</button></Link>
+      <Link to={`/${this.state.technologyId}`}><button className="button">Go!</button></Link>
     </form>
     </div> : <Graph id={this.props.match.params.id} />} 
 
