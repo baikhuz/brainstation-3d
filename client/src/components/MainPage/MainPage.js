@@ -1,15 +1,36 @@
 import React from 'react';
 import './MainPage.scss';
+import GraphTest from './GraphTest';
+import {Link} from "react-router-dom";
 
 class MainPage extends React.Component {
+  state = {
+    technologyId: '',
+    graphId: '',
+    clicked: false,
+    mainpage: true
+  }
+  handleChange = (e) => {
+    let id = e.target.value;
+    this.setState({
+      technologyId: id
+    });
+    
+  }
+  componentDidUpdate(){
+    if (this.state.mainpage && this.props.match.params.id){
+      this.setState({graphId:this.props.match.params.id, mainpage: false})
+    }
+  }
   render(){
   return (
-    <>
+    <div>
+    {!this.props.match.params.id ? <div>
     <h1>NexStep</h1>
     <span>Where will you find your perfect job?</span>
     <p>Just select the field you're experienced in and discover the provinces where it's in demand!</p>
     <form>
-      <select>
+      <select onChange={this.handleChange}>
         <option value="None">Select your skills!</option>
         <option value="ICT_cloud">Cloud Technologies</option>
         <option value="ICT_data_analytics">Data Analytics</option>
@@ -26,9 +47,11 @@ class MainPage extends React.Component {
         <option value="ICT_client_server">Client Servers</option>
         <option value="ICT_other">Client Servers</option>
       </select>
-      <button>Go!</button>
+      <Link to={`/${this.state.technologyId}`}><button>Go!</button></Link>
     </form>
-    </>
+    </div> : <GraphTest id={this.props.match.params.id}></GraphTest>} 
+
+  </div>
   );
   }
 }
