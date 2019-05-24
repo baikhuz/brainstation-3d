@@ -15,6 +15,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path = '/' component = { MainPage } />
+        <Route path = '/:id' component = { MainPage } />
       </Switch>
     </BrowserRouter>
   );

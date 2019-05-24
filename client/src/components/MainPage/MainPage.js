@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainPage.scss';
-import GraphTest from './GraphTest';
 import {Link} from "react-router-dom";
+import Graph from '../Graph/Graph';
 
 class MainPage extends React.Component {
   state = {
@@ -49,7 +49,7 @@ class MainPage extends React.Component {
       </select>
       <Link to={`/${this.state.technologyId}`}><button>Go!</button></Link>
     </form>
-    </div> : <GraphTest id={this.props.match.params.id}></GraphTest>} 
+    </div> : <Graph id={this.props.match.params.id} />} 
 
   </div>
   );
