@@ -1,0 +1,68 @@
+$lightblacktint: rgba(50,50,50,0.5);
+
+.main{
+    height: 824px;
+    background-image: url("./back2.png");
+    background-size: cover;
+    background-color: grey;
+    background-position: 0px -350px
+}
+.info{
+    width: 644px;
+    height: 90px;
+    font-family: NunitoSans;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: white;
+    margin-top: 58px;
+    margin-left: 400px; 
+    margin-bottom: 15px; 
+}
+.title{
+    width: 100%;
+    margin-left: 230px;
+    margin-top: 130px;
+    height: 82px;
+    font-family: NunitoSans;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    color: #ffffff;
+}
+.logowords{
+    margin-left: 10px;
+    padding-bottom: 5px
+}
+.logoimage{
+    margin-left: 25px;
+}
+.logoflex{
+    padding-top: 2rem;
+}
+.drop{
+    width: 555px;
+    height: 71px;
+    border-radius: 5px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+    margin-left: 260px
+}
+.button{
+    width: 307px;
+
+  height: 68px;
+  border-radius: 5px;
+  background-color: #ff3636;
+  margin-left: 44px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
