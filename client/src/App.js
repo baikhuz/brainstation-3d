@@ -1,5 +1,5 @@
 import React from 'react';
-// import Navbar from '../src/components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 // import MainPage from '../src/components/MainPage';
 
 import { 
@@ -10,7 +10,7 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      {/* <Navbar /> */}
+      <Navbar />
       <Switch>
         {/* <Route exact path = '/' component = { MainPage } /> */}
       </Switch>
