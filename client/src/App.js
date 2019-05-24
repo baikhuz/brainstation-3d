@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../src/components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import MainPage from '../src/components/MainPage/MainPage';
 
 import '../src/global-styles.scss';
