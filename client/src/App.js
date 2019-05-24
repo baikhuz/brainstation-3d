@@ -12,9 +12,9 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Switch>
         <Route exact path = '/' component = { MainPage } />
+        <Route path = '/:id' component = { MainPage } />
       </Switch>
     </BrowserRouter>
   );

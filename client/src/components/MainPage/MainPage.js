@@ -2,6 +2,8 @@ import React from 'react';
 import './MainPage.scss';
 import GraphTest from './GraphTest';
 import {Link} from "react-router-dom";
+import logo1 from "./nex-step.png"
+import logo2 from "./group-copy-2.png"
 
 class MainPage extends React.Component {
   state = {
@@ -25,12 +27,15 @@ class MainPage extends React.Component {
   render(){
   return (
     <div>
-    {!this.props.match.params.id ? <div>
-    <h1>NexStep</h1>
-    <span>Where will you find your perfect job?</span>
-    <p>Just select the field you're experienced in and discover the provinces where it's in demand!</p>
+    {!this.props.match.params.id ? <div className="main">
+    <div className="logoflex">
+    <img className="logoimage" src={logo2}/>
+    <img className="logowords" src={logo1}/>
+    </div>
+    <div className="title">Where will you find your perfect job?</div>
+    <div className="info">Just select the field you're experienced in and discover the provinces where it's in demand!</div>
     <form>
-      <select onChange={this.handleChange}>
+      <select className="drop" onChange={this.handleChange}>
         <option value="None">Select your skills!</option>
         <option value="ICT_cloud">Cloud Technologies</option>
         <option value="ICT_data_analytics">Data Analytics</option>
@@ -47,7 +52,7 @@ class MainPage extends React.Component {
         <option value="ICT_client_server">Client Servers</option>
         <option value="ICT_other">Client Servers</option>
       </select>
-      <Link to={`/${this.state.technologyId}`}><button>Go!</button></Link>
+      <Link to={`/${this.state.technologyId}`}><button class="button">Go!</button></Link>
     </form>
     </div> : <GraphTest id={this.props.match.params.id}></GraphTest>} 
 
