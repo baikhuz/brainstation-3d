@@ -56,7 +56,19 @@ export default class Graph extends Component {
                         width={10}
                         height={350}
                         options={{
-                            maintainAspectRatio: false
+                            maintainAspectRatio: false,
+                            legend: {
+                                fontColor: "#FFF"
+                            },
+                            scales: {
+                                xAxes: [
+                                    {
+                                         ticks: {
+                                             fontColor: "#FFF"
+                                         }
+                                    }
+                                ]
+                            }
                         }}
                     />
                 </div>
