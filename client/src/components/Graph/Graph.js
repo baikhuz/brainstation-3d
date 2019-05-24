@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2';
 import IctData from '../../data/byprovinceaggregate.json';
-
+import './Graph.scss'
 export default class Graph extends Component {
 
     state = {
@@ -33,7 +33,7 @@ export default class Graph extends Component {
                 datasets: [
                     {
                         label: 'Number of Companies by Province',
-                        backgroundColor: '#9CC69B',
+                        backgroundColor: '#FF3636',
                         borderColor: '#79B4A9',
                         data: chartData,
                     },
@@ -50,14 +50,28 @@ export default class Graph extends Component {
             return null;
         } else {
             return (
-                <Bar 
-                    data={this.state.data}
-                    width={10}
-                    height={350}
-                    options={{
-                        maintainAspectRatio: false
-                    }}
-                />
+                <div className="mainG">
+                    <Bar 
+                        data={this.state.data}
+                        width={10}
+                        height={350}
+                        options={{
+                            maintainAspectRatio: false,
+                            legend: {
+                                fontColor: "#FFF"
+                            },
+                            scales: {
+                                xAxes: [
+                                    {
+                                         ticks: {
+                                             fontColor: "#FFF"
+                                         }
+                                    }
+                                ]
+                            }
+                        }}
+                    />
+                </div>
             )
         }
     }
