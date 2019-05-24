@@ -34,8 +34,8 @@ class MainPage extends React.Component {
     </div>
     <div className="title">Where will you find your perfect job?</div>
     <div className="info">Just select the field you're experienced in and discover the provinces where it's in demand!</div>
-    <form>
-      <select className="drop" onChange={this.handleChange}>
+    <form className="cta-form">
+      <select className="minimal" onChange={this.handleChange}>
         <option value="None">Select your skills!</option>
         <option value="ICT_cloud">Cloud Technologies</option>
         <option value="ICT_data_analytics">Data Analytics</option>
@@ -52,7 +52,7 @@ class MainPage extends React.Component {
         <option value="ICT_client_server">Client Servers</option>
         <option value="ICT_other">Client Servers</option>
       </select>
-      <Link to={`/${this.state.technologyId}`}><button class="button">Go!</button></Link>
+      <Link to={`/${this.state.technologyId}`}><button className="button">Go!</button></Link>
     </form>
     </div> : <Graph id={this.props.match.params.id} />} 
 
