@@ -9,9 +9,7 @@ render()
   return (
     <div className="navBar">
         <div className="navBar__navLogo">
-            <NavLink to="/">NexStep
-                {/* <img src={Logo} alt="Instock" /> */}
-            </NavLink>
+            <NavLink to="/">NexStep</NavLink>
         </div>
                     
         <div className="navBar__navLink">

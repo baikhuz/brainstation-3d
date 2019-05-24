@@ -2,10 +2,8 @@ body{
     margin: 0;
 }
 .navBar{
-    
-    height: 68px;
-    object-fit: contain;
-    background-color: #d8d8d8;
+    top: 0;
+    background-color: gray;
     display: flex;
     flex-direction: column;
     width: 100%;
