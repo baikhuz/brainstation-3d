@@ -34,7 +34,7 @@ class MainPage extends React.Component {
     </div>
     <div className="title">Where will you find your perfect job?</div>
     <div className="info">Just select the field you're experienced in and discover the provinces where it's in demand!</div>
-    <form>
+    <form className = "cta-form">
       <select className="drop" onChange={this.handleChange}>
         <option value="None">Select your skills!</option>
         <option value="ICT_cloud">Cloud Technologies</option>
